@@ -1,0 +1,6 @@
+https://github.com/shimmerproject/Numix
+commit ea88563e22dc68e16fabf80442e6a9bc488605a4
+Author: Satyajit Sahoo <satyajit.happy@gmail.com>
+Date:   Tue Jun 25 14:52:38 2013 +0530
+
+    Tweaks to metacity and mutter themes. Fixes #48

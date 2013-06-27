@@ -1,0 +1,33 @@
+[user]
+  name  = Cedric Fung
+  email = cedric@vec.io
+[color]
+  ui          = auto
+  interactive = auto
+[repack]
+  usedeltabaseoffset = true
+[alias]
+  s      = status
+  d      = diff
+  db     = diff -b
+  ds     = diff --cached
+  dsb    = diff --cached -b
+  c      = commit
+  cm     = commit -m
+  amend  = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+  a      = !git add . && git status
+  au     = !git add -u && git status
+  aa     = !git add . && git add -u && git status
+  l      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ll     = log --stat --abbrev-commit
+  b      = branch
+  t      = tag -n
+  pl     = pull --rebase
+  ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+  remove = !git ls-files -z --deleted | xargs -0 git rm
+  tip    = log -1
+  mg     = merge --no-ff -e
+  alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+
+[push]
+  default = simple

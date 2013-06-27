@@ -1,0 +1,26 @@
+[ui]
+username = Cedric Fung <cedric@vec.io>
+
+[ui]
+ssh = ssh -C
+
+[extensions]
+bookmarks =
+
+[bookmarks]
+track.current = True
+
+[extensions]
+hgext.graphlog =
+
+[extensions]
+color =
+
+[extensions]
+hgext.mq =
+
+[extensions]
+record =
+
+[extensions]
+rebase =

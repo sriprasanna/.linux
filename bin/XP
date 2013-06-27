@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/lib/virtualbox/VirtualBox --comment XP --startvm 6123f83a-d138-4926-a553-e1ed389099da --no-startvm-errormsgbox

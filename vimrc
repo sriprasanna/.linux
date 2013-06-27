@@ -56,6 +56,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'avakhov/vim-yaml'
 NeoBundle 'vim-scripts/DrawIt'
+NeoBundle 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git'
 " Libraries
 NeoBundle 'L9'
 NeoBundle 'tpope/vim-repeat'

@@ -24,10 +24,10 @@ NeoBundle 'spiiph/vim-space'
 NeoBundle 'Lokaltog/vim-easymotion'
 " UI Additions
 NeoBundle 'mutewinter/vim-indent-guides'
-NeoBundle 'dickeyxxx/status.vim'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'Lokaltog/vim-powerline', 'develop'
 " Commands
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
@@ -92,6 +92,7 @@ syntax enable
 " ---------------
 " Text format
 " ---------------
+set encoding=utf-8
 set cindent
 set autoindent
 set smarttab
@@ -203,13 +204,13 @@ nnoremap <C-n> :VimFilerExplorer<CR>
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
-let g:unite_source_rec_max_cache_files = 5000
+let g:unite_source_rec_max_cache_files = 1000
 let g:unite_prompt = '» '
 let g:unite_source_grep_command = 'ack'
 let g:unite_source_grep_default_opts = '-H --nocolor --nogroup'
 let g:unite_source_grep_recursive_opt = ''
 nnoremap <C-p> :Unite buffer file_rec/async file_mru<CR>
-nnoremap <C-f> :Unite file<CR>
+nnoremap <C-m> :Unite file<CR>
 nnoremap <leader>/ :Unite grep:.<CR>
 
 " ---------------
@@ -282,26 +283,10 @@ let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
-" status.vim
+" powerline
 " ---------------
-let g:statusline_fugitive=1
-let g:statusline_fullpath=0
-let g:statusline_order=[
-      \ 'Filename',
-      \ 'Filetype',
-      \ 'Encoding',
-      \ 'Help',
-      \ 'Modified',
-      \ 'Fugitive',
-      \ 'TabWarning',
-      \ 'Paste',
-      \ 'ReadOnly',
-      \ 'Syntastic',
-      \ 'RightSeperator',
-      \ 'CurrentHighlight',
-      \ 'CursorColumn',
-      \ 'LineAndTotal',
-      \ 'FilePercent']
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_cache_dir = expand('~/.vim/cache')
 
 " ---------------
 " Tabular

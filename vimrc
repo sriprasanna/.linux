@@ -50,6 +50,7 @@ NeoBundle 'dag/vim2hs'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'vim-pandoc/vim-pandoc'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'leshill/vim-json'
 NeoBundle 'othree/html5.vim'
@@ -58,6 +59,7 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'avakhov/vim-yaml'
 NeoBundle 'vim-scripts/DrawIt'
 NeoBundle 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git'
+NeoBundle 'Shougo/vinarise.vim'
 " Libraries
 NeoBundle 'L9'
 NeoBundle 'tpope/vim-repeat'
@@ -68,8 +70,6 @@ filetype plugin indent on
 " -------------
 " Interface
 " -------------
-set t_Co=256
-set background=dark
 set ruler
 set number
 set wrap
@@ -84,6 +84,8 @@ set mousehide
 set mouse=a
 set noerrorbells
 set novisualbell
+set t_Co=256
+set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
 let g:solarized_termtrans=0

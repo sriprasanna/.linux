@@ -28,6 +28,7 @@ NeoBundle 'godlygeek/csapprox'
 NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Lokaltog/vim-powerline', 'develop'
+NeoBundle 'osyo-manga/vim-powerline-unite-theme'
 " Commands
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
@@ -187,24 +188,13 @@ let g:startify_show_files_number = 10
 let g:startify_bookmarks = [ '~/.vimrc' ]
 
 " ---------------
-" vimshell
-" ---------------
-let g:vimshell_temporary_directory = expand('~/.vim/cache/vimshell')
-
-" ---------------
-" vimfiler
-" ---------------
-let g:vimfiler_data_directory = '~/.vim/cache/vimfiler'
-let g:vimfiler_as_default_explorer = 1
-nnoremap <C-n> :VimFilerExplorer<CR>
-
-" ---------------
 " unite.vim
 " ---------------
 let g:unite_data_directory = '~/.vim/cache/unite'
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_rec_max_cache_files = 1000
+let g:unite_force_overwrite_statusline = 0
 let g:unite_prompt = '» '
 let g:unite_source_grep_command = 'ack'
 let g:unite_source_grep_default_opts = '-H --nocolor --nogroup'
@@ -212,6 +202,26 @@ let g:unite_source_grep_recursive_opt = ''
 nnoremap <C-p> :Unite buffer file_rec/async file_mru<CR>
 nnoremap <C-m> :Unite file<CR>
 nnoremap <leader>/ :Unite grep:.<CR>
+
+" ---------------
+" vimshell
+" ---------------
+let g:vimshell_temporary_directory = expand('~/.vim/cache/vimshell')
+let g:vimshell_force_overwrite_statusline = 0
+
+" ---------------
+" vimfiler
+" ---------------
+let g:vimfiler_data_directory = '~/.vim/cache/vimfiler'
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_force_overwrite_statusline = 0
+nnoremap <C-n> :VimFilerExplorer<CR>
+
+" ---------------
+" powerline
+" ---------------
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_cache_dir = expand('~/.vim/cache')
 
 " ---------------
 " SuperTab
@@ -281,12 +291,6 @@ let g:indent_guides_guide_size=1
 let g:session_autosave=0
 let g:session_autoload=0
 nnoremap <leader>os :OpenSession<CR>
-
-" ---------------
-" powerline
-" ---------------
-let g:Powerline_symbols = 'unicode'
-let g:Powerline_cache_dir = expand('~/.vim/cache')
 
 " ---------------
 " Tabular

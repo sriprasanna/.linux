@@ -47,6 +47,8 @@ NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'mhinz/vim-startify'
 " Language Additions
 NeoBundle 'dag/vim2hs'
+NeoBundle 'vecio/lispp.vim'
+NeoBundle 'https://bitbucket.org/kovisoft/slimv', { 'type': 'hg' }
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
@@ -310,3 +312,13 @@ vmap <leader>t> :Tabularize /=>\zs<CR>
 " taglist.vim
 " ---------------
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+
+" ---------------
+" slimv
+" mit-scheme
+" ---------------
+let g:slimv_impl = 'mit'
+let g:slimv_disable_clojure = 1
+let g:slimv_disable_lisp = 1
+let g:scheme_builtin_swank = 1

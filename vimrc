@@ -20,6 +20,7 @@ NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak', }, }
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'sjl/gundo.vim'
 NeoBundle 'spiiph/vim-space'
 NeoBundle 'Lokaltog/vim-easymotion'
 " UI Additions
@@ -286,6 +287,12 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory = '~/.vim/bundle/vim-snippets/snippets'
 imap <silent><C-k> <Plug>(neosnippet_expand_or_jump)
 smap <silent><C-k> <Plug>(neosnippet_expand_or_jump)
+
+" ---------------
+" gundo.vim
+" ---------------
+let g:gundo_width = 32
+let g:gundo_preview_height = 16
 
 " ---------------
 " indent-guides

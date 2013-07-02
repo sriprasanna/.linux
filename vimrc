@@ -201,8 +201,8 @@ let g:unite_source_grep_command = 'ack'
 let g:unite_source_grep_default_opts = '-H --nocolor --nogroup'
 let g:unite_source_grep_recursive_opt = ''
 nnoremap <C-p> :Unite buffer file_rec/async file_mru<CR>
-nnoremap <C-m> :Unite file<CR>
-nnoremap <leader>/ :Unite grep:.<CR>
+nnoremap <C-\> :Unite file<CR>
+nnoremap <C-g> :Unite grep:.<CR>
 
 " ---------------
 " vimshell
@@ -227,6 +227,7 @@ let g:Powerline_cache_dir = expand('~/.vim/cache')
 " ---------------
 " neocomplete.vim
 " ---------------
+let g:neocomplete#data_directory = '~/.vim/cache/neocomplete'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_fuzzy_completion = 1
@@ -325,13 +326,6 @@ let g:indent_guides_auto_colors=1
 let g:indent_guides_enable_on_vim_startup=0
 let g:indent_guides_color_change_percent=5
 let g:indent_guides_guide_size=1
-
-" ---------------
-" Session
-" ---------------
-let g:session_autosave=0
-let g:session_autoload=0
-nnoremap <leader>os :OpenSession<CR>
 
 " ---------------
 " Tabular

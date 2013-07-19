@@ -38,6 +38,7 @@ NeoBundle 'godlygeek/tabular'
 " Automatic Helpers
 NeoBundle 'IndexedSearch'
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'Shougo/neocomplete.vim'
@@ -297,7 +298,23 @@ let g:gundo_preview_height = 16
 " ---------------
 " indent-guides
 " ---------------
+let g:indent_guides_auto_colors=1
+let g:indent_guides_enable_on_vim_startup=0
+let g:indent_guides_color_change_percent=5
+let g:indent_guides_guide_size=1
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
+
+" ---------------
+" Tabular
+" ---------------
+nmap <leader>t= :Tabularize /=<CR>
+vmap <leader>t= :Tabularize /=<CR>
+nmap <leader>t: :Tabularize /:\zs<CR>
+vmap <leader>t: :Tabularize /:\zs<CR>
+nmap <leader>t, :Tabularize /,\zs<CR>
+vmap <leader>t, :Tabularize /,\zs<CR>
+nmap <leader>t> :Tabularize /=>\zs<CR>
+vmap <leader>t> :Tabularize /=>\zs<CR>
 
 " ---------------
 " zencoding
@@ -327,26 +344,6 @@ let g:html_indent_sciript1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " ---------------
-" Indent Guides
-" ---------------
-let g:indent_guides_auto_colors=1
-let g:indent_guides_enable_on_vim_startup=0
-let g:indent_guides_color_change_percent=5
-let g:indent_guides_guide_size=1
-
-" ---------------
-" Tabular
-" ---------------
-nmap <leader>t= :Tabularize /=<CR>
-vmap <leader>t= :Tabularize /=<CR>
-nmap <leader>t: :Tabularize /:\zs<CR>
-vmap <leader>t: :Tabularize /:\zs<CR>
-nmap <leader>t, :Tabularize /,\zs<CR>
-vmap <leader>t, :Tabularize /,\zs<CR>
-nmap <leader>t> :Tabularize /=>\zs<CR>
-vmap <leader>t> :Tabularize /=>\zs<CR>
-
-" ---------------
 " slimv
 " mit-scheme
 " ---------------
@@ -354,3 +351,17 @@ let g:slimv_impl = 'mit'
 let g:slimv_disable_clojure = 1
 let g:slimv_disable_lisp = 1
 let g:scheme_builtin_swank = 1
+
+" ---------------
+" vim2hs
+" ---------------
+let g:haskell_hsp = 0
+
+" --------------
+" syntastic
+" --------------
+let g:syntastic_ignore_files = ['^/usr/include/']
+let g:syntastic_c_config_file = '.syntastic_c_config'
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_compiler = 'gcc'
+let g:syntastic_c_compiler_options = '-std=c99 -Wall'

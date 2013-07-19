@@ -82,7 +82,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias sqlite='sqlite3 -column -header'
-alias gcc='gcc -Wall -std=c99'
+alias gcc='gcc -Wall -std=c99 -march=native'
 alias ghc='ghc -Wall'
 alias rscp='rsync -v -P -e ssh'
 alias clip='xclip -sel clip'

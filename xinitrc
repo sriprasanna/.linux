@@ -24,7 +24,6 @@ export GNOME_KEYRING_PID
 
 # Daily apps
 tray &
-pidgin &
 nm-applet &
 parcellite &
 volumeicon &

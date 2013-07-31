@@ -82,12 +82,14 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias sqlite='sqlite3 -column -header'
-alias gcc='gcc -Wall -std=c99 -march=native'
+alias gcc='gcc -std=c99 -march=native'
 alias ghc='ghc -Wall'
 alias rscp='rsync -v -P -e ssh'
 alias clip='xclip -sel clip'
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias http="ruby -rwebrick -e'WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd).start'"
 
 
 # other custom configs

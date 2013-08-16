@@ -63,6 +63,7 @@ export NDK_CCACHE=ccache
 export USE_CCACHE=1
 
 export PATH=~/.bin:~/.cabal/bin:$ANDROID_NDK:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$ANDROID/bin/:$PATH
+export NODE_PATH=$NODE_PATH:/usr/lib/node_modules/
 
 
 ########################

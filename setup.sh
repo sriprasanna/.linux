@@ -8,5 +8,3 @@ cabal update && cabal install yeganesh
 sudo systemctl enable NetworkManager
 sudo systemctl enable slim
 sudo pacman -S gtk-engine-murrine oxygen-icons oxygen-icons-svg xcursor-vanilla-dmz
-ln -s ~/.linux/gtkrc-2.0 ~/.gtkrc-2.0
-ln -s ~/.linux/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini

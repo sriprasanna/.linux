@@ -6,7 +6,7 @@ Server = http://repo.archlinux.fr/$arch
 sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-input-synaptics nvidia acpid
 sudo systemctl enable acpid
 sudo nvidia-xconfig
-echo "install i915 /bin/false
+sudo echo "install i915 /bin/false
 install intel_agp /bin/false
 install intel_gtt /bin/false" > /etc/modprobe.d/video.conf
 sudo rm -rf /etc/X11/xorg.conf /etc/X11/xorg.conf.d

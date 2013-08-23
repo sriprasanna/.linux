@@ -2,7 +2,7 @@ sudo cp /etc/pacman.conf /etc/pacman.conf.old
 sudo tee -a /etc/pacman.conf <<EOF
 [archlinuxfr]
 SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
+Server = http://repo.archlinux.fr/\$arch
 EOF
 sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-input-synaptics nvidia acpid
 sudo systemctl enable acpid

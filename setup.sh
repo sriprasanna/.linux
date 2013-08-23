@@ -1,4 +1,4 @@
-sudo mv /etc/pacman.conf /etc/pacman.conf.old
+sudo cp /etc/pacman.conf /etc/pacman.conf.old
 sudo echo "[archlinuxfr]
 SigLevel = Never
 Server = http://repo.archlinux.fr/$arch

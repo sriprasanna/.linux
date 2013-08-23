@@ -1,6 +1,13 @@
+echo "[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+" >> /etc/pacman.conf
 sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-input-synaptics nvidia acpid
 sudo systemctl enable acpid
 sudo nvidia-xconfig
+echo "install i915 /bin/false
+install intel_agp /bin/false
+install intel_gtt /bin/false" > /etc/modprobe.d/video.conf
 sudo rm -rf /etc/X11/xorg.conf /etc/X11/xorg.conf.d
 sudo cp ~/.etc/X11/xorg.conf /etc/X11/xorg.conf
 sudo cp -r ~/.etc/X11/xorg.conf.d /etc/X11/xorg.conf.d

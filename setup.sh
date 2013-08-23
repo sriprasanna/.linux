@@ -1,4 +1,5 @@
-echo "[archlinuxfr]
+mv /etc/pacman.conf /etc/pacman.conf.old
+sudo echo "[archlinuxfr]
 SigLevel = Never
 Server = http://repo.archlinux.fr/$arch
 " >> /etc/pacman.conf

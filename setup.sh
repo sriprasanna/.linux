@@ -4,7 +4,8 @@ sudo tee -a /etc/pacman.conf <<EOF
 SigLevel = Never
 Server = http://repo.archlinux.fr/\$arch
 EOF
-sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-input-synaptics nvidia acpid
+sudo pacman -Syu
+sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-input-synaptics nvidia acpid yaourt
 sudo systemctl enable acpid
 sudo nvidia-xconfig
 sudo tee -a /etc/modprobe.d/video.conf <<EOF
